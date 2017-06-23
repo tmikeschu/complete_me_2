@@ -43,11 +43,4 @@ class Node
       false => next_node
     }
   end
-  
-  def links?
-    {
-      true => count_words,
-      false => no_links
-    }
-  end
 end

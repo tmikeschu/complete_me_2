@@ -2,6 +2,7 @@ require "node"
 
 class CompleteMe
   attr_reader :root
+
   def initialize
     @root = Node.new
   end
@@ -16,8 +17,7 @@ class CompleteMe
 
   def cycle_node(data, node, link)
     next_node = node.links[data[link]]
-    (next_node && suggest(data, next_node, link + 1)) ||
-    []
+    (next_node && suggest(data, next_node, link + 1)) || []
   end
 
   private
@@ -29,3 +29,4 @@ class CompleteMe
     }
   end
 end
+
